@@ -8,14 +8,14 @@ export function AISection() {
   return (
     <section id="ia" className="border-b border-(--color-line) px-5 py-9 sm:px-11 lg:py-17">
       <div className="flex flex-col gap-9 lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-12">
-        <h2 className="m-0 text-[15px] font-semibold tracking-[0.06em] uppercase">
+        <h2 className="m-0 font-mono text-[15px] font-medium tracking-[0.05em] uppercase">
           {kickerLine1}
           <br />
           {kickerLine2}
         </h2>
         <div className="flex flex-col gap-7.5">
           <p
-            className="m-0 max-w-[24ch] border-l pl-5.5 text-2xl font-medium leading-[1.32] tracking-[-0.025em] sm:text-[27px]"
+            className="m-0 max-w-[30ch] border-l pl-5.5 font-display text-xl leading-[1.4] font-medium tracking-[-0.035em] sm:text-[23px]"
             style={{ borderColor: 'var(--color-accent)' }}
           >
             {statement}

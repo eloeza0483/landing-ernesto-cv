@@ -1,0 +1,71 @@
+{
+  "pages": [
+    { "id": "textos", "name": "Textos" },
+    { "id": "tipografias", "name": "Tipografías" }
+  ],
+  "artboards": [
+    { "file": "CopyActual.dc.html", "title": "Actual · el texto de hoy", "page": "textos", "x": 0, "y": 0, "w": 1440, "h": 880 },
+    { "file": "Main.dc.html", "title": "A · Operación real", "page": "textos", "x": 1560, "y": 0, "w": 1440, "h": 880 },
+    { "file": "CopyB.dc.html", "title": "B · Rescate de legacy", "page": "textos", "x": 0, "y": 1120, "w": 1440, "h": 880 },
+    { "file": "CopyC.dc.html", "title": "C · Primera persona", "page": "textos", "x": 1560, "y": 1120, "w": 1440, "h": 880 },
+    { "file": "CopyD.dc.html", "title": "D · Autonomía", "page": "textos", "x": 0, "y": 2240, "w": 1440, "h": 880 },
+
+    { "file": "TipoE.dc.html", "title": "E · Mono protagonista — elegida", "page": "tipografias", "x": 0, "y": 0, "w": 1440, "h": 880 },
+    { "file": "Actual.dc.html", "title": "Actual · Archivo", "page": "tipografias", "x": 1560, "y": 0, "w": 1440, "h": 880 },
+    { "file": "TipoA.dc.html", "title": "A · Serif editorial", "page": "tipografias", "x": 0, "y": 1120, "w": 1440, "h": 880 },
+    { "file": "TipoB.dc.html", "title": "B · Grotesca técnica", "page": "tipografias", "x": 1560, "y": 1120, "w": 1440, "h": 880 },
+    { "file": "TipoC.dc.html", "title": "C · Geométrica producto", "page": "tipografias", "x": 0, "y": 2240, "w": 1440, "h": 880 },
+    { "file": "TipoD.dc.html", "title": "D · Display contemporáneo", "page": "tipografias", "x": 1560, "y": 2240, "w": 1440, "h": 880 }
+  ],
+  "annotations": [
+    {
+      "id": "nota-copy-actual",
+      "page": "textos",
+      "x": 0,
+      "y": 910,
+      "w": 700,
+      "text": "El texto de hoy, ya con la tipografía que elegiste.\nQué falla: el titular dice una idea correcta pero abstracta —'un negocio' no es nadie— y el párrafo es una lista de tecnologías, no una razón para contratarte. Sirve de comparación."
+    },
+    {
+      "id": "nota-copy-a",
+      "page": "textos",
+      "x": 1560,
+      "y": 910,
+      "w": 700,
+      "text": "A · Operación real — habla del negocio del otro, no de tu stack.\nPor qué: cambia 'un negocio' por los negocios que de verdad usan tu software (talleres, refaccionarias, puntos de venta) y pone la prueba —150 personas simultáneas— dentro de la frase, no en una ficha aparte. Funciona igual con reclutador que con cliente.\nTradeoff: el stack baja de prioridad; un reclutador que filtra por 'React' tiene que leer un poco más."
+    },
+    {
+      "id": "nota-copy-b",
+      "page": "textos",
+      "x": 0,
+      "y": 2030,
+      "w": 700,
+      "text": "B · Rescate de legacy — te vuelve especialista en vez de generalista.\nPor qué: 'sin apagar la operación' es el miedo real de quien tiene un sistema viejo, y Firebird conviviendo con APIs nuevas es algo que muy poca gente puede decir con hechos.\nTradeoff: te encasilla. Si buscas un puesto full stack de producto, este titular te deja fuera de la conversación."
+    },
+    {
+      "id": "nota-copy-c",
+      "page": "textos",
+      "x": 1560,
+      "y": 2030,
+      "w": 700,
+      "text": "C · Primera persona — la más memorable y la más arriesgada.\nPor qué: el titular es una frase que alguien repite. Tiene voz, reconoce el problema del cliente y el mono en negritas la vuelve casi una declaración escrita a máquina.\nTradeoff: suena freelance. Para un reclutador corporativo puede leerse informal — y 'ya no da para más' asume que quien lee tiene un problema, cosa que no siempre es cierta."
+    },
+    {
+      "id": "nota-copy-d",
+      "page": "textos",
+      "x": 0,
+      "y": 3150,
+      "w": 700,
+      "text": "D · Autonomía — vende disciplina de ingeniería, no horas.\nPor qué: 'que no necesita que yo esté ahí' es exactamente lo que un reclutador quiere oír (calidad, pruebas, CI/CD) y lo que un cliente teme no tener (dependencia del programador). Es el único titular que habla de lo que pasa después de la entrega.\nTradeoff: es el más abstracto de los cuatro; no dice para quién ni de qué tipo de sistemas hablas."
+    },
+    {
+      "id": "nota-tipo-elegida",
+      "page": "tipografias",
+      "x": 0,
+      "y": 910,
+      "w": 700,
+      "text": "Elegida: JetBrains Mono en titulares, Schibsted Grotesk en texto.\nQueda como registro de la exploración; las de abajo son las que no van."
+    }
+  ],
+  "launch": { "view": "canvas", "page": "textos" }
+}

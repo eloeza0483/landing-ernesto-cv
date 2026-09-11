@@ -49,7 +49,7 @@ export function ProjectsSection() {
 
   return (
     <section id="proyectos" className="border-b border-(--color-line) px-5 py-9 sm:px-11 lg:py-17">
-      <h2 className="m-0 mb-9 text-[15px] font-semibold tracking-[0.06em] uppercase">{t.projectsTitle}</h2>
+      <h2 className="m-0 mb-9 font-mono text-[15px] font-medium tracking-[0.05em] uppercase">{t.projectsTitle}</h2>
       <div className="flex flex-col">
         {t.projects.map((project) => (
           <ProjectRow key={project.title} project={project} />

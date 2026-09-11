@@ -20,7 +20,7 @@ export function StackSection() {
 
   return (
     <section id="stack" className="border-b border-(--color-line) px-5 py-9 sm:px-11 lg:py-17">
-      <h2 className="m-0 mb-9 text-[15px] font-semibold tracking-[0.06em] uppercase">{t.stackTitle}</h2>
+      <h2 className="m-0 mb-9 font-mono text-[15px] font-medium tracking-[0.05em] uppercase">{t.stackTitle}</h2>
 
       {/* Escritorio: retícula con reglas horizontales */}
       <div className="hidden lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-x-12">

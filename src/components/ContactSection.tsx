@@ -7,11 +7,11 @@ export function ContactSection() {
 
   return (
     <section id="contacto" className="grid grid-cols-1 gap-8 px-5 py-9 sm:px-11 lg:grid-cols-[200px_minmax(0,1fr)] lg:py-17">
-      <h2 className="m-0 text-[15px] font-semibold tracking-[0.06em] uppercase">{t.contactTitle}</h2>
+      <h2 className="m-0 font-mono text-[15px] font-medium tracking-[0.05em] uppercase">{t.contactTitle}</h2>
       <div className="flex flex-col gap-6.5">
         <a
           href={`mailto:${CONTACT.email}`}
-          className="u m-0 self-start text-[28px] font-semibold tracking-[-0.03em] sm:text-[40px]"
+          className="u m-0 self-start font-display text-[20px] font-medium tracking-[-0.04em] sm:text-[30px]"
           style={{ color: 'var(--color-fg)' }}
         >
           {CONTACT.email}

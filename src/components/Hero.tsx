@@ -8,6 +8,14 @@ export function Hero() {
   const { t } = useLanguage()
   const { hero, info } = t
 
+  const title = (
+    <>
+      {hero.titleLead}
+      <span style={{ color: 'var(--color-accent)' }}>{hero.titleAccent}</span>
+      {hero.titleTail}
+    </>
+  )
+
   const ctaButtons = (
     <div className="rise d3 flex gap-3.5">
       <a
@@ -42,8 +50,8 @@ export function Hero() {
       {/* Escritorio */}
       <div className="hidden border-b border-(--color-line) px-11 py-19 lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start lg:gap-18">
         <div className="flex flex-col gap-8.5">
-          <h1 className="rise d1 m-0 text-[66px] leading-[1.03] font-semibold tracking-[-0.035em] text-wrap-balance">
-            {hero.title}
+          <h1 className="rise d1 m-0 font-display text-[44px] leading-[1.14] font-bold tracking-[-0.045em] text-wrap-balance">
+            {title}
           </h1>
           <p className="rise d2 m-0 max-w-[62ch] text-[19px] leading-[1.6] text-wrap-pretty" style={{ color: 'var(--color-muted)' }}>
             {hero.body}
@@ -81,8 +89,8 @@ export function Hero() {
             {t.info.location.value}
           </span>
         </div>
-        <h1 className="rise d2 m-0 text-[36px] leading-[1.08] font-semibold tracking-[-0.035em] text-wrap-balance">
-          {hero.title}
+        <h1 className="rise d2 m-0 font-display text-[26px] leading-[1.2] font-bold tracking-[-0.04em] text-wrap-balance">
+          {title}
         </h1>
         <p className="rise d3 m-0 text-base leading-[1.62]" style={{ color: 'var(--color-muted)' }}>
           {hero.body}

@@ -25,7 +25,9 @@ export interface Content {
   nav: { stack: string; projects: string; ai: string; contact: string }
   role: string
   hero: {
-    title: string
+    titleLead: string
+    titleAccent: string
+    titleTail: string
     body: string
     ctaPrimary: string
     ctaSecondary: string
@@ -56,11 +58,13 @@ export const content: Record<Lang, Content> = {
     nav: { stack: 'Stack', projects: 'Proyectos', ai: 'IA', contact: 'Contacto' },
     role: 'Desarrollador Full Stack',
     hero: {
-      title: 'Aplicaciones que sostienen la operación diaria de un negocio.',
+      titleLead: 'Cuéntame cómo trabaja ',
+      titleAccent: 'tu negocio',
+      titleTail: ' y lo mejoramos.',
       body:
-        'Diseño, pruebo y despliego sistemas full stack con React, TypeScript, Node.js y Laravel. ' +
-        'Migro sistemas legacy a arquitecturas containerizadas y respaldo cada entrega con pruebas ' +
-        'automatizadas y CI/CD.',
+        'Hago sistemas que usan talleres, distribuidoras y puntos de venta de verdad. Migro cosas ' +
+        'viejas sin apagar el negocio, escribo pruebas porque no me gusta arreglar incendios, y dejo ' +
+        'todo corriendo solo. Si algo de eso te sirve, aquí abajo están mis proyectos.',
       ctaPrimary: 'Ver proyectos',
       ctaSecondary: 'Descargar CV',
     },
@@ -221,10 +225,14 @@ export const content: Record<Lang, Content> = {
     nav: { stack: 'Stack', projects: 'Work', ai: 'AI', contact: 'Contact' },
     role: 'Full Stack Developer',
     hero: {
-      title: 'Applications that keep a business running, day after day.',
+      titleLead: 'Tell me how ',
+      titleAccent: 'your business',
+      titleTail: ' works and we improve it.',
       body:
-        'I design, test and ship full stack systems with React, TypeScript, Node.js and Laravel. I migrate ' +
-        'legacy systems to containerized architectures and back every release with automated testing and CI/CD.',
+        'I build the systems that real repair shops, distributors and points of sale actually use. I move ' +
+        'old software off legacy without shutting the business down, I write tests because I would rather ' +
+        'not put out fires, and I leave everything deploying on its own. If any of that is useful to you, ' +
+        'my work is right below.',
       ctaPrimary: 'View work',
       ctaSecondary: 'Download CV',
     },
