@@ -1,6 +1,7 @@
 import { AISection } from './components/AISection'
 import { BackToTop } from './components/BackToTop'
 import { ContactSection } from './components/ContactSection'
+import { DotsBackground } from './components/DotsBackground'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { ProjectsSection } from './components/ProjectsSection'
@@ -10,6 +11,7 @@ import { LanguageProvider } from './i18n/LanguageContext'
 function App() {
   return (
     <LanguageProvider>
+      <DotsBackground />
       <div className="snap-section">
         <Header />
         <Hero />
