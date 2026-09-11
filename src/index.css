@@ -158,15 +158,6 @@ a:hover {
   background-size: 100% 1px;
 }
 
-/* retrato: entra apagado, recupera color al acercarse */
-.foto {
-  filter: grayscale(0.92) contrast(1.06) brightness(0.92);
-  transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.foto:hover {
-  filter: grayscale(0.12) contrast(1.02) brightness(1);
-}
-
 /* estado disponible */
 @keyframes latido {
   0%,
@@ -207,6 +198,16 @@ a:hover {
   transform: translateY(-2px);
 }
 
+/* CV: el borde responde aunque el efecto magnético no llegue a correr */
+.btn-cv {
+  border-color: #35353c;
+  color: var(--color-fg);
+  transition: border-color 0.25s ease;
+}
+.btn-cv:hover {
+  border-color: var(--color-accent);
+}
+
 .lang-pill {
   transition:
     background-color 0.3s ease,
@@ -244,7 +245,6 @@ a:hover {
   .project-row .project-go,
   .chip,
   .u,
-  .foto,
   .btn,
   .lang-pill {
     transition: none;

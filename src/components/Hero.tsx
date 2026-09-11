@@ -1,5 +1,6 @@
 import { CV_PDF_URL } from '../config'
 import retrato from '../assets/retrato.jpg'
+import { DownloadCVButton } from './DownloadCVButton'
 import { useLanguage } from '../i18n/useLanguage'
 import { InfoRow } from './InfoRow'
 import { StatusValue } from './StatusValue'
@@ -25,13 +26,11 @@ export function Hero() {
       >
         {hero.ctaPrimary}
       </a>
-      <a
+      <DownloadCVButton
         href={CV_PDF_URL}
-        className="btn inline-flex h-13 items-center border px-7 text-[15px] font-medium"
-        style={{ borderColor: '#35353c', color: 'var(--color-fg)' }}
-      >
-        {hero.ctaSecondary}
-      </a>
+        label={hero.ctaSecondary}
+        className="inline-flex h-13 items-center border px-7 text-[15px] font-medium"
+      />
     </div>
   )
 
@@ -65,7 +64,7 @@ export function Hero() {
             alt="Ernesto Loeza Camargo"
             width={320}
             height={320}
-            className="foto block h-[320px] w-[320px] object-cover"
+            className="block h-[320px] w-[320px] object-cover"
           />
           <div className="flex flex-col border-t-2" style={{ borderColor: 'var(--color-fg)' }}>
             {infoRows}
@@ -81,7 +80,7 @@ export function Hero() {
             alt="Ernesto Loeza Camargo"
             width={86}
             height={86}
-            className="foto rise d1 h-[86px] w-[86px] shrink-0 object-cover"
+            className="rise d1 h-[86px] w-[86px] shrink-0 object-cover"
           />
           <span className="lbl" style={{ textTransform: 'none', letterSpacing: '0.01em' }}>
             {t.role}
@@ -103,13 +102,11 @@ export function Hero() {
           >
             {hero.ctaPrimary}
           </a>
-          <a
+          <DownloadCVButton
             href={CV_PDF_URL}
-            className="btn flex h-13 items-center justify-center border text-base font-medium"
-            style={{ borderColor: '#35353c', color: 'var(--color-fg)' }}
-          >
-            {hero.ctaSecondary}
-          </a>
+            label={hero.ctaSecondary}
+            className="flex h-13 items-center justify-center border text-base font-medium"
+          />
         </div>
         <div className="flex flex-col">{infoRows}</div>
       </div>
