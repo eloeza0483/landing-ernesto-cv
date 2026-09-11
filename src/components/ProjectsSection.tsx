@@ -2,7 +2,7 @@ import { useLanguage } from '../i18n/useLanguage'
 import type { Project } from '../i18n/translations'
 import { Icon } from './Icon'
 
-function ProjectRow({ project }: { project: Project }) {
+function ProjectRow({ project, repoLabel }: { project: Project; repoLabel: string }) {
   const Wrapper = project.repoUrl ? 'a' : 'div'
   const wrapperProps = project.repoUrl
     ? { href: project.repoUrl, target: '_blank', rel: 'noopener noreferrer' }
@@ -28,15 +28,17 @@ function ProjectRow({ project }: { project: Project }) {
           {project.description}
         </p>
       </div>
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex flex-col items-start gap-3">
         <div className="flex flex-wrap items-start gap-3.5" style={{ color: 'var(--color-dim)' }}>
           {project.icons.map((icon) => (
             <Icon key={icon} name={icon} size={20} />
           ))}
         </div>
         {project.repoUrl && (
-          <span className="project-go lbl hidden sm:inline" style={{ color: 'var(--color-accent)' }}>
-            →
+          <span className="project-go lbl">
+            <Icon name="github" size={13} />
+            {repoLabel}
+            <span aria-hidden="true">↗</span>
           </span>
         )}
       </div>
@@ -52,7 +54,7 @@ export function ProjectsSection() {
       <h2 className="m-0 mb-9 font-mono text-[15px] font-medium tracking-[0.05em] uppercase">{t.projectsTitle}</h2>
       <div className="flex flex-col">
         {t.projects.map((project) => (
-          <ProjectRow key={project.title} project={project} />
+          <ProjectRow key={project.title} project={project} repoLabel={t.projectsRepoLabel} />
         ))}
         <div className="border-t border-(--color-line)" />
       </div>

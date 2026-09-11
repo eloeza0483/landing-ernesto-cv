@@ -42,6 +42,7 @@ export interface Content {
   stackTitle: string
   stack: StackGroup[]
   projectsTitle: string
+  projectsRepoLabel: string
   projects: Project[]
   ai: {
     kickerLine1: string
@@ -136,6 +137,7 @@ export const content: Record<Lang, Content> = {
       },
     ],
     projectsTitle: 'Proyectos',
+    projectsRepoLabel: 'Ver código en GitHub',
     projects: [
       {
         metaTop: '+150 usuarios activos',
@@ -304,6 +306,7 @@ export const content: Record<Lang, Content> = {
       },
     ],
     projectsTitle: 'Selected work',
+    projectsRepoLabel: 'View code on GitHub',
     projects: [
       {
         metaTop: '150+ active users',

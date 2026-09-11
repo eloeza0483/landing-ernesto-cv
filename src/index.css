@@ -117,16 +117,18 @@ a:hover {
 .project-row:hover .project-title {
   transform: translateX(6px);
 }
+/* Siempre visible: sin esto no se adivina que la fila lleva al repositorio */
 .project-row .project-go {
-  opacity: 0;
-  transform: translateX(-8px);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   transition:
-    opacity 0.3s ease,
+    color 0.3s ease,
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .project-row:hover .project-go {
-  opacity: 1;
-  transform: none;
+  color: var(--color-accent);
+  transform: translateX(4px);
 }
 
 /* stack: el icono recupera presencia al pasar el cursor */
