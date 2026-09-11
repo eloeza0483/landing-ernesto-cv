@@ -12,7 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Exploración de diseño: pesa ~7 MB y no interviene en el build
+design
+
 # Editor directories and files
+.claude
 .vscode/*
 !.vscode/extensions.json
 .idea
