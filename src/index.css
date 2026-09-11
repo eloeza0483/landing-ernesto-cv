@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #0b0b0e;
+  --color-fg: #ededea;
+  --color-muted: #b4b3ad;
+  --color-dim: #8b8b85;
+  --color-line: #232327;
+  --color-accent: #a08bd0;
+  --color-accent-hover: #c4b2ec;
+
+  --font-sans: Archivo, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  caret-color: var(--color-accent);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c2c33;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.lbl {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-dim);
+}
+
+/* un solo momento de entrada, escalonado, con salida exponencial */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.d1 { animation-delay: 0.04s; }
+.d2 { animation-delay: 0.11s; }
+.d3 { animation-delay: 0.18s; }
+.d4 { animation-delay: 0.25s; }
+.d5 { animation-delay: 0.32s; }
+.d6 { animation-delay: 0.39s; }
+.d7 { animation-delay: 0.46s; }
+
+/* fila de proyecto: la regla superior se tiñe y el título avanza */
+.project-row {
+  border-top: 1px solid var(--color-line);
+  transition:
+    background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-top-color 0.3s ease;
+}
+.project-row:hover {
+  background-color: #101014;
+  border-top-color: var(--color-accent);
+}
+.project-row .project-title {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-row:hover .project-title {
+  transform: translateX(6px);
+}
+.project-row .project-go {
+  opacity: 0;
+  transform: translateX(-8px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-row:hover .project-go {
+  opacity: 1;
+  transform: none;
+}
+
+/* stack: el icono recupera presencia al pasar el cursor */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: var(--color-fg);
+  opacity: 0.82;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.chip:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* subrayado que crece */
+.u {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.u:hover {
+  background-size: 100% 1px;
+}
+
+/* retrato: entra apagado, recupera color al acercarse */
+.foto {
+  filter: grayscale(0.92) contrast(1.06) brightness(0.92);
+  transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.foto:hover {
+  filter: grayscale(0.12) contrast(1.02) brightness(1);
+}
+
+/* estado disponible */
+@keyframes latido {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(2.1);
+  }
+}
+.punto {
+  position: relative;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--color-accent);
+  border-radius: 50%;
+}
+.punto::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent);
+  border-radius: 50%;
+  animation: latido 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.btn {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.lang-pill {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  cursor: pointer;
+}
+
+.back-to-top {
+  cursor: pointer;
+  transition:
+    opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+.back-to-top:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
+  .rise {
+    animation: none;
+  }
+  .punto::after {
+    animation: none;
+    opacity: 0.4;
+  }
+  .project-row,
+  .project-row .project-title,
+  .project-row .project-go,
+  .chip,
+  .u,
+  .foto,
+  .btn,
+  .lang-pill {
+    transition: none;
+  }
+}
