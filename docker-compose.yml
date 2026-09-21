@@ -1,0 +1,11 @@
+services:
+  app:
+    image: ghcr.io/eloeza0483/landing-ernesto-cv:${IMAGE_TAG:-latest}
+    restart: unless-stopped
+    container_name: landing-app
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
