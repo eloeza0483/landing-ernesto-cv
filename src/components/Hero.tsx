@@ -78,9 +78,10 @@ export function Hero() {
           <img
             src={retrato}
             alt="Ernesto Loeza Camargo"
-            width={86}
-            height={86}
-            className="rise d1 h-[86px] w-[86px] shrink-0 object-cover"
+            width={104}
+            height={104}
+            className="rise d1 h-[104px] w-[104px] shrink-0 border object-cover"
+            style={{ borderColor: 'var(--color-line)' }}
           />
           <span className="lbl" style={{ textTransform: 'none', letterSpacing: '0.01em' }}>
             {t.role}
