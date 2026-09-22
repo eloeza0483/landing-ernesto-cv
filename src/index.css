@@ -21,12 +21,20 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
-.snap-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+/* Scroll snapping solo en desktop: en móvil, "stop: always" pelea con el
+   scroll táctil y rompe tanto el swipe dentro de secciones largas (proyectos)
+   como el scrollTo programático (botón "volver arriba"). */
+@media (min-width: 1024px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
 }
 
 * {
