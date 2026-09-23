@@ -65,7 +65,8 @@ export const content: Record<Lang, Content> = {
       body:
         'Disfruto igual armar un backend sólido que cuidar cada detalle de una interfaz. Lo que más me ' +
         'gusta es sentarme a entender cómo trabaja un negocio y convertirlo en un sistema que de verdad ' +
-        'le ahorre tiempo. Busco un equipo donde pueda aportar eso y seguir creciendo. Abajo está lo que he hecho.',
+        'le ahorre tiempo. Si un proyecto pide un stack que no conozco, lo aprendo; me gusta estar al día con ' +
+        'lo nuevo. Busco un equipo donde pueda aportar eso y seguir creciendo. Abajo está lo que he hecho.',
       ctaPrimary: 'Ver proyectos',
       ctaSecondary: 'Descargar CV',
     },
@@ -233,7 +234,8 @@ export const content: Record<Lang, Content> = {
       body:
         'I enjoy building a solid backend just as much as polishing every detail of an interface. What I like ' +
         'most is sitting down to understand how a business runs and turning that into a system that actually ' +
-        "saves it time. I'm looking for a team where I can bring that and keep growing. My work is right below.",
+        "saves it time. If a project calls for a stack I don't know yet, I learn it; I like keeping up with " +
+        "what's new. I'm looking for a team where I can bring that and keep growing. My work is right below.",
       ctaPrimary: 'View work',
       ctaSecondary: 'Download CV',
     },
