@@ -59,13 +59,13 @@ export const content: Record<Lang, Content> = {
     nav: { stack: 'Stack', projects: 'Proyectos', ai: 'IA', contact: 'Contacto' },
     role: 'Desarrollador Full Stack',
     hero: {
-      titleLead: 'Cuéntame cómo trabaja ',
-      titleAccent: 'tu negocio',
-      titleTail: ' y lo mejoramos.',
+      titleLead: 'Hola, soy Ernesto y me encanta ',
+      titleAccent: 'crear software',
+      titleTail: ' de principio a fin.',
       body:
-        'Hago sistemas que usan talleres, distribuidoras y puntos de venta de verdad. Migro cosas ' +
-        'viejas sin apagar el negocio, escribo pruebas porque no me gusta arreglar incendios, y dejo ' +
-        'todo corriendo solo. Si algo de eso te sirve, aquí abajo están mis proyectos.',
+        'Disfruto igual armar un backend sólido que cuidar cada detalle de una interfaz. Lo que más me ' +
+        'gusta es sentarme a entender cómo trabaja un negocio y convertirlo en un sistema que de verdad ' +
+        'le ahorre tiempo. Busco un equipo donde pueda aportar eso y seguir creciendo. Abajo está lo que he hecho.',
       ctaPrimary: 'Ver proyectos',
       ctaSecondary: 'Descargar CV',
     },
@@ -201,22 +201,22 @@ export const content: Record<Lang, Content> = {
           icon: 'claude',
           title: 'Claude Code extendido',
           description:
-            'MCP, Custom Skills, subagentes y hooks para orquestar refactorización de legacy, generación de ' +
-            'pruebas y tareas repetitivas.',
+            'MCP, skills propias, subagentes y hooks. Reparto el trabajo entre agentes que corren en paralelo ' +
+            'y yo me quedo revisando y decidiendo. Así entrego más rápido sin bajar la calidad.',
         },
         {
-          icon: 'googlegemini',
-          title: 'Agentes en producción',
+          icon: 'sparkles',
+          title: 'IA dentro de mis sistemas',
           description:
-            'Gemini API con la lógica de negocio en código determinista y el modelo solo conversando. Eso ' +
-            'evita que un agente invente un precio.',
+            'Conecto por API el modelo que mejor le quede al proyecto, sin casarme con un proveedor. La lógica ' +
+            'de negocio vive en el código y el modelo solo conversa, así un agente nunca inventa un precio.',
         },
         {
           icon: 'n8n',
-          title: 'Automatización con n8n',
+          title: 'Flujos automatizados',
           description:
-            'Flujos que conectan el sistema con Telegram, generan PDFs y disparan notificaciones sin ' +
-            'intervención manual.',
+            'Conecto sistemas, apps de mensajería, correo y bases de datos para que los documentos, avisos y ' +
+            'tareas repetitivas salgan solos, sin que nadie tenga que acordarse.',
         },
       ],
     },
@@ -227,14 +227,13 @@ export const content: Record<Lang, Content> = {
     nav: { stack: 'Stack', projects: 'Work', ai: 'AI', contact: 'Contact' },
     role: 'Full Stack Developer',
     hero: {
-      titleLead: 'Tell me how ',
-      titleAccent: 'your business',
-      titleTail: ' works and we improve it.',
+      titleLead: "Hi, I'm Ernesto and I love ",
+      titleAccent: 'building software',
+      titleTail: ' end to end.',
       body:
-        'I build the systems that real repair shops, distributors and points of sale actually use. I move ' +
-        'old software off legacy without shutting the business down, I write tests because I would rather ' +
-        'not put out fires, and I leave everything deploying on its own. If any of that is useful to you, ' +
-        'my work is right below.',
+        'I enjoy building a solid backend just as much as polishing every detail of an interface. What I like ' +
+        'most is sitting down to understand how a business runs and turning that into a system that actually ' +
+        "saves it time. I'm looking for a team where I can bring that and keep growing. My work is right below.",
       ctaPrimary: 'View work',
       ctaSecondary: 'Download CV',
     },
@@ -370,22 +369,22 @@ export const content: Record<Lang, Content> = {
           icon: 'claude',
           title: 'Claude Code, extended',
           description:
-            'MCP, custom skills, subagents and hooks orchestrating legacy refactoring, unit test generation ' +
-            'and repetitive work.',
+            'MCP, my own skills, subagents and hooks. I split the work across agents running in parallel while ' +
+            'I review and make the calls. That lets me ship faster without lowering the bar.',
         },
         {
-          icon: 'googlegemini',
-          title: 'Agents in production',
+          icon: 'sparkles',
+          title: 'AI inside my systems',
           description:
-            'Gemini API with business logic in deterministic code and the model only conversing. That is ' +
-            'what stops an agent from inventing a price.',
+            'I plug in whichever model fits the project through its API, with no vendor lock-in. Business logic ' +
+            'lives in code and the model only talks, so an agent never makes up a price.',
         },
         {
           icon: 'n8n',
-          title: 'Automation with n8n',
+          title: 'Automated workflows',
           description:
-            'Workflows connecting the system to Telegram, generating PDFs and firing notifications with no ' +
-            'manual step.',
+            'I connect systems, messaging apps, email and databases so documents, alerts and repetitive tasks ' +
+            'happen on their own, without anyone having to remember them.',
         },
       ],
     },
